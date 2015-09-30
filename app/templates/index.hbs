@@ -7,4 +7,5 @@
 
 {{#each model as |vendor|}}
   {{vendor.name}}
+<button {{action 'deleteVendor' vendor}}>Delete</button>
 {{/each}}
