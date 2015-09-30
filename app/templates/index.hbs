@@ -1,0 +1,10 @@
+<h1>Lisa's Farmers Market</h1>
+
+<h3>Hours and Location</h3>
+
+{{add-vendor createVendor='saveVendor'}}
+<br>
+
+{{#each model as |vendor|}}
+  {{vendor.name}}
+{{/each}}
