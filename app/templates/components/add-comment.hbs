@@ -1,0 +1,9 @@
+<form>
+  <label for="name">Name</label>
+  {{input value=name id=name}}
+
+  <label for="content">Comment</label>
+  {{input value=content id=content}}
+
+  <button {{action 'addComment'}}>Add Comment</button>
+</form>

@@ -14,6 +14,16 @@ export default Ember.Route.extend({
       });
       vendor.save();
       this.transitionTo('vendor', params.vendor_id);
+    },
+
+    addComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      var vendor = params.vendor;
+      vendor.get('comments').addObject(newComment);
+      newComment.save().then(function(){
+        return vendor.save();
+      });
+      this.transitionTo('vendor', params.vendor);
     }
   }
 });
