@@ -13,7 +13,7 @@ export default Ember.Route.extend({
         }
       });
       vendor.save();
-      this.transitionTo('index');
+      this.transitionTo('vendor', params.vendor_id);
     }
   }
 });
