@@ -6,6 +6,6 @@
 <br>
 
 {{#each model as |vendor|}}
-  {{vendor.name}}
+  {{#link-to 'vendor' vendor.id}}{{vendor.name}}{{/link-to}}
 <button {{action 'deleteVendor' vendor}}>Delete</button>
 {{/each}}
