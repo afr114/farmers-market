@@ -1,0 +1,18 @@
+<form>
+  <label for="name">Name</label>
+  {{input id="name" value=name}}
+
+  <label for="image">Image</label>
+  {{input id="image" value=image}}
+
+  <label for="description">Description</label>
+  {{input id="description" value=description}}
+
+  <label for="website">Website</label>
+  {{input id="website" value=website}}
+
+  <label for="product">Product</label>
+  {{input id="product" value=product}}
+
+  <button {{action 'update' vendor}}>Update Vendor</button>
+</form>
