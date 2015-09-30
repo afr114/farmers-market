@@ -8,3 +8,7 @@
 <br>
 
 {{add-comment addComment='addComment' vendor=model}}
+
+{{#each model.comments as |comment|}}
+ {{comment.content}} by {{comment.name}}
+{{/each}}
