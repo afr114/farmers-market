@@ -11,4 +11,5 @@
 
 {{#each model.comments as |comment|}}
  {{comment.content}} by {{comment.name}}
+ <button {{action 'deleteComment' comment}}>Delete</button>
 {{/each}}

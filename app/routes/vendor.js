@@ -24,6 +24,10 @@ export default Ember.Route.extend({
         return vendor.save();
       });
       this.transitionTo('vendor', params.vendor);
+    },
+
+    deleteComment(comment) {
+      comment.destroyRecord();
     }
   }
 });
