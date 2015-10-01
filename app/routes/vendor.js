@@ -26,6 +26,15 @@ export default Ember.Route.extend({
       this.transitionTo('vendor', vendor.id);
     },
 
+    saveUpdate(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          comment.set(key,params[key]);
+        }
+      });
+      comment.save();
+    },
+
     deleteComment(comment) {
       comment.destroyRecord();
     }
