@@ -1,3 +1,4 @@
+{{#if openUpdateVendorForm}}
 <form>
   <label for="name">Name</label>
   {{input id="name" value=name}}
@@ -14,5 +15,8 @@
   <label for="product">Product</label>
   {{input id="product" value=product}}
 
-  <button {{action 'update' vendor}}>Update Vendor</button>
+  <button {{action 'update' vendor}}>Save</button>
 </form>
+{{else}}
+<button {{action 'addVendorForm'}}>Update Vendor</button>
+{{/if}}
