@@ -14,6 +14,9 @@ export default Ember.Route.extend({
 
     deleteVendor(vendor) {
       if (confirm('Are you sure you want to delete this vendor')) {
+      vendor.get('comments').forEach(function(comment) {
+      comment.destroyRecord();
+    });
       vendor.destroyRecord();
       this.transitionTo('index');
       }
