@@ -1,22 +1,33 @@
 {{#if openVendorForm}}
+
   <form>
-  <label for="name">Name</label>
-  {{input id="name" value=name}}
+    <div class='form-group'>
+      <label for="name">Name</label>
+      {{input id="name" value=name class='form-control'}}
+    </div>
 
-  <label for="image">Image</label>
-  {{input id="image" value=image}}
+    <div class='form-group'>
+      <label for="image">Image</label>
+      {{input id="image" value=image class='form-control'}}
+    </div>
 
-  <label for="description">Description</label>
-  {{input id="description" value=description}}
+    <div class='form-group'>
+      <label for="description">Description</label>
+      {{input id="description" value=description class='form-control'}}
+    </div>
 
-  <label for="website">Website</label>
-  {{input id="website" value=website}}
+    <div class='form-group'>
+      <label for="website">Website</label>
+      {{input id="website" value=website class='form-control'}}
+    </div>
 
-  <label for="product">Product</label>
-  {{input id="product" value=product}}
+    <div class='form-group'>
+      <label for="product">Product</label>
+      {{input id="product" value=product class='form-control'}}
+    </div>
 
-  <button {{action 'createVendor'}}>Save</button>
+    <button class="btn btn-success btn-sm"{{action 'createVendor'}}>Save</button>
   </form>
 {{else}}
-  <button {{action 'addVendorForm'}}>Add New Vendor</button>
+    <button class="btn btn-sm btn-primary"{{action 'addVendorForm'}}>Add New Vendor</button>
 {{/if}}

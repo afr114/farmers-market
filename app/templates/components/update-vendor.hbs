@@ -1,22 +1,32 @@
 {{#if openUpdateVendorForm}}
   <form>
-    <label for="name">Name</label>
-    {{input id="name" value=name}}
+    <div class='form-group'>
+      <label for="name">Name</label>
+      {{input class='form-control' id="name" value=name}}
+    </div>
 
-    <label for="image">Image</label>
-    {{input id="image" value=image}}
+    <div class='form-group'>
+      <label for="image">Image</label>
+      {{input class='form-control' id="image" value=image}}
+    </div>
 
-    <label for="description">Description</label>
-    {{input id="description" value=description}}
+    <div class='form-group'>
+      <label for="description">Description</label>
+      {{input class='form-control' id="description" value=description}}
+    </div>
 
-    <label for="website">Website</label>
-    {{input id="website" value=website}}
+    <div class='form-group'>
+      <label for="website">Website</label>
+      {{input class='form-control' id="website" value=website}}
+    </div>
 
-    <label for="product">Product</label>
-    {{input id="product" value=product}}
+    <div class='form-group'>
+      <label for="product">Product</label>
+      {{input class='form-control' id="product" value=product}}
+    </div>
 
-    <button {{action 'update' vendor}}>Save</button>
+    <button class='btn btn-xs btn-success' {{action 'update' vendor}}>Save</button>
   </form>
 {{else}}
-  <button {{action 'addVendorForm'}}>Update Vendor</button>
+  <button class='btn btn-sm btn-btn' {{action 'addVendorForm'}}>Update Vendor</button>
 {{/if}}

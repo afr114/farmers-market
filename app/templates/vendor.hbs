@@ -9,8 +9,17 @@
 
 {{add-comment addComment='addComment' vendor=model}}
 <br>
-{{#each model.comments as |comment|}}
- {{comment.content}} by {{comment.name}} on {{current-date}}
- <button {{action 'deleteComment' comment}}>Delete</button>
-{{update-comment saveUpdate='saveUpdate'comment=comment}}
-{{/each}}
+<div class="table-responsive">
+  <tr>
+  <th>Comments</th>
+  </tr>
+  <table class="table">
+  {{#each model.comments as |comment|}}
+  <tr>
+    <td>{{comment.content}} by {{comment.name}} on {{current-date}}</td>
+    <td><button class="btn btn-xs btn-danger"{{action 'deleteComment' comment}}>Delete</button></td>
+    <td>{{update-comment saveUpdate='saveUpdate'comment=comment}}</td>
+  </tr>
+    {{/each}}
+  </table>
+</div>

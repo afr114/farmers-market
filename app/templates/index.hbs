@@ -1,13 +1,28 @@
-<h1>Lisa's Farmers Market</h1>
+<div class="container">
+  <div class="brandimage">
+  <!-- <img src="http://www.portlandfarmersmarket.org/wp-content/uploads/2015/04/logo.png" alt=""> -->
+  </div>
+  <h3>Hours and Location</h3>
+<!-- <div class="embed-responsive embed-responsive-16by9" width="150" height="50" > -->
+<iframe style="border:0" src="https://www.google.com/maps/embed/v1/place?q=portland%20state%20university%20farmers%20marke&key=AIzaSyCB0Jv-SG2YsOwKxS_00t61kxeojDYCGLA" allowfullscreen></iframe>
+<!-- </div> -->
+  {{add-vendor createVendor='saveVendor'}}
+  <br>
 
-<iframe width="350" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=portland%20state%20university%20farmers%20marke&key=AIzaSyCB0Jv-SG2YsOwKxS_00t61kxeojDYCGLA" allowfullscreen></iframe>
+  <h3>Market Vendors</h3>
+<div class="table-responsive">
+  <table class="table">
+<tr>
+<th>Vendor Name</th>
+</tr>
+  {{#each model as |vendor|}}
+<tr>
+  <td>{{#link-to 'vendor' vendor.id}}{{vendor.name}}{{/link-to}}</td>
+  <td><button class="btn btn-xs btn-primary" {{action 'deleteVendor' vendor}}>Delete</button></td>
+</tr>
+  {{/each}}
+</table>
+</div>
 
-<h3>Hours and Location</h3>
 
-{{add-vendor createVendor='saveVendor'}}
-<br>
-
-{{#each model as |vendor|}}
-  {{#link-to 'vendor' vendor.id}}{{vendor.name}}{{/link-to}}
-<button {{action 'deleteVendor' vendor}}>Delete</button>
-{{/each}}
+</div>
