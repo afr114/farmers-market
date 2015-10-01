@@ -23,7 +23,7 @@ export default Ember.Route.extend({
       newComment.save().then(function(){
         return vendor.save();
       });
-      this.transitionTo('vendor', params.vendor);
+      this.transitionTo('vendor', vendor.id);
     },
 
     deleteComment(comment) {

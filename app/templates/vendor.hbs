@@ -10,6 +10,6 @@
 {{add-comment addComment='addComment' vendor=model}}
 
 {{#each model.comments as |comment|}}
- {{comment.content}} by {{comment.name}}
+ {{comment.content}} by {{comment.name}} on {{current-date}}
  <button {{action 'deleteComment' comment}}>Delete</button>
 {{/each}}
